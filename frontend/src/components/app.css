@@ -1,0 +1,444 @@
+@import url('https://fonts.cdnfonts.com/css/verdana');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav{
+    /* margin-top: 2%; */
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid; */
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 6rem;
+    /* background-color: #FFE8E6; */
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(54,121,9,1) 46%, rgba(0,212,255,1) 100%);
+}
+h1{
+    color: green;
+}
+.home{
+    position: fixed;
+    top: 500px;
+    left: 50px;
+    border-radius: 50px;
+    border: none;
+    background-color: yellow;
+    width: var(--s);
+    aspect-ratio: 1;
+    outline: calc(var(--s)/2) solid #0009;
+    outline-offset: calc(var(--s)/-2);
+    cursor: pointer;
+    transition: 0.3s;
+    --s: 140px;
+    --b: 8px; 
+    --g: 14px; 
+    --c: #4ECDC4;
+}
+.home:hover{
+    outline: var(--b) solid var(--c);
+    outline-offset: var(--g);
+} 
+.cam{
+    transition: transform .2s;
+}
+.cam:hover{
+    transform: scale(1.5);
+}
+.logo{
+    width: 65px;
+    height: 65px;
+    /* mix-blend-mode: multiply;
+    filter: contrast(1); */
+    color: rgb(170, 255, 0);
+}
+.logo:hover{
+    cursor: pointer;
+}
+.sp1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.img{
+    width: 100%;
+    height: 250px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(88,9,121,1) 46%, rgba(0,212,255,1) 100%);
+    height: 1000vh;
+}
+.container{
+    margin-top: 2%;
+    border: 1px solid #b2b0b0;
+    border-radius: 5px;
+    box-shadow: 5px 10px 18px #888888;
+    width: 600px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sp2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.sp3{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.sp-1{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px; 
+}
+.min-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.med{
+    font-size: 18px;
+}
+.name{
+    font-size: 22px;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+.likesend{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formarea{
+    height: 100vh;
+    /* background-color:#E6F5FF ; */
+    background: url('./Images/desktop-1280x1024.jpg');
+}
+form{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 3em;
+    width: 50%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    /* background-color: white; */
+    background: url('./Images/teahub.io-plain-wallpaper-28598.jpg');
+}
+hr{
+    color: #006238;
+
+}
+.loca{
+    width: 30%;
+    height: 50px;
+    padding-left: 10px;
+}
+.auth{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#post{
+    width: 10%;
+    height: 50px;
+    margin-left: 47%;
+    text-decoration: none;  
+}
+.post{
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+#description{
+    width: 100%;
+    height: 90px;
+    padding-left: 10px;
+    font-size: large;
+}
+.land{
+    margin-top: 10em;
+    display: flex;
+    gap: 100px;
+    align-items: center; 
+}
+.enter-div{
+    display: flex;
+    flex-direction: column;
+}
+.land-img{
+    height: 600px;
+    width: 400px;
+    margin-left: 20rem;
+}
+/* .enter{
+    border: 3px solid #006238;
+    border-radius: 16px;
+    opacity: 1;
+    width: 128px;
+    height: 64px;   
+    background-color: white;
+    font: normal normal normal 32px/39px Verdana;
+    letter-spacing: 0px;
+    color: #006238;
+    opacity: 1;
+} */
+.enter {
+    width: 220px;
+    height: 75px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.enter:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.enter:active {
+    color: #000
+}
+
+.enter:active:after {
+    background: transparent;
+}
+
+.enter:hover:before {
+    opacity: 1;
+}
+
+.enter:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+button:hover{
+    cursor: pointer;
+}
+.head{
+    font: normal normal normal 64px/85px Palatino;
+    letter-spacing: 0px;
+    color: #006238;
+    opacity: 1;
+}
+#file{
+    visibility: hidden;
+}
+.Browse{
+    border: 1px solid;
+    padding: 6px;
+    background-color: rgba(211, 211, 211, 0.992);
+}
+.Browse:hover{
+    cursor: pointer;
+}
+.brwse{
+    display: flex;
+    flex-direction: row;
+}
+#choose{
+    width: 93%;
+    height: 50px;
+    padding-left: 10px;
+}
+#file{
+    width: 0;
+}
+.req{
+    color: red;
+}
+.postv{
+    text-decoration: none;
+}
+#logo{
+    font-size: 4rem;
+    color: rgb(170, 255, 0);
+}
+input{
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
+@media only screen and (max-width:1200px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .nav{
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .logo{
+        height: 30px;
+        width: 30px;
+    }
+    #logo{
+        font-size: 2rem;
+    }
+    .home{
+        display: none;
+    }
+    .container{
+        height: 400px;
+        width: 80%;
+    }
+    .img{
+        height: 250px;
+    }
+    .name{
+        font-size: 20px;
+    }
+    .land{
+        margin-top: 10em;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    .land-img{
+        margin-left: 10em;
+        height: 600px;
+        width: 400px;
+    }
+    .enter-div{
+        padding: 0;
+        margin-left: 1em;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+    }
+    .head{
+        font-size: 70px;
+    }
+    .enter{
+        height: 70px;
+        width: 50%;
+    }
+   
+}
+@media only screen and (max-width:576px){
+    .land{
+        margin-top: 4em;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    .land-img{
+        margin-left: 1em;
+        height: 240px;
+        width: 150px;
+    }
+    .enter-div{
+        padding: 0;
+        margin-left: 1em;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+    .head{
+        font-size: 25px;
+    }
+    .enter{
+        height: 50px;
+        width: 80%;
+        font-size: 20px;
+    }
+    .formarea{
+        width: 100%;
+    }
+    .form{
+        width: 100%;
+    }
+    form{
+        width: 90%;
+    }
+    .post-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #post{
+        width: 40%;
+        margin: 0;
+    }
+    .brwse{
+        width: 100%;
+    }
+    #choose{
+        width: 100%;
+    }
+    #file{
+        width: 0;
+    }
+}
