@@ -19,7 +19,7 @@ const Upload = () => {
   useEffect(() => {
     if (imgurl) {
       console.log("imgurl: ", imgurl);
-      fetch("http://localhost:1517/posts", {
+      fetch("https://instagram-clone-app-nf2h.onrender.com/posts", {
         method: "post",
         headers: {
           "Content-Type": "application/json",

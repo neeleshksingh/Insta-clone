@@ -15,4 +15,4 @@ app.get("*", (req, res) => {
     res.status(404).send("API IS NOT FOUND");
 })
 
-app.listen(1517, () => { console.log("Listening on port 1517") })
+app.listen(1517 || process.env.PORT, () => { console.log("Listening on port 1517") })

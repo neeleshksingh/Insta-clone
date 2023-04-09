@@ -14,7 +14,7 @@ const Postview = () => {
   useEffect(() => {
     setGif(true);
     axios
-      .get("http://localhost:1517/posts")
+      .get("https://instagram-clone-app-nf2h.onrender.com/posts")
       .then(function (response) {
         console.log(response);
         setArr(response.data);
