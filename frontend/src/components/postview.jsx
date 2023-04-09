@@ -14,7 +14,7 @@ const Postview = () => {
   useEffect(() => {
     setGif(true);
     axios
-      .get("https://instaclone-app-c06e.onrender.com/posts")
+      .get("http://localhost:1517/posts")
       .then(function (response) {
         console.log(response);
         setArr(response.data);
@@ -51,19 +51,10 @@ const Postview = () => {
         </div>
         {arr.map((data, index) => {
           
-          const base64String = btoa(
-            new Uint8Array(data.PostImage.data.data).reduce(function (
-              data,
-              byte
-            ) {
-              return data + String.fromCharCode(byte);
-            },
-            "")
-          );
           
           return (
             <>
-              <section className="container" key={data._id}>
+              <section className="container" key={index}>
                 <div className="sp-1">
                   <div className="min-nav">
                     <h4 className="name">{data.name}</h4>
@@ -74,7 +65,7 @@ const Postview = () => {
 
                 <img
                   className="img"
-                  src={`data:image/png;base64,${base64String}`}
+                  src={data.PostImage}
                   alt=""
                 />
                 <div className="sp2">

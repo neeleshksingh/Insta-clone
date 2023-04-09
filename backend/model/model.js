@@ -6,7 +6,7 @@ const userSchema = new Schema({
     location: { type: String, required: true },
     likes: { type: Number, default: Math.floor(Math.random() * 100) },
     description: { type: String, required: true },
-    PostImage: { data: Buffer, contentType: String },
+    PostImage: { type: String, required: true },
     Date: { type: String, default: new Date().toLocaleDateString() }
 }, { timestamps: true })
 
