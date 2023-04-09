@@ -1,10 +1,12 @@
 import "./app.css";
+import GifLoader from 'react-gif-loader';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
 const Upload = () => {
   const [image, setImage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [imgurl, setImgurl] = useState("");
   const [fileName, setFileName] = useState({
     name: "",
@@ -36,6 +38,7 @@ const Upload = () => {
           if (data.error) {
             setError(data.error);
           } else {
+            alert('Your Post has been uploaded successfully')
             nav("/postview");
           }
         })
@@ -73,7 +76,7 @@ const Upload = () => {
       setError({ ...error, description: "Description field is required" });
       return;
     }
-
+    setIsSubmitting(true);
     ImageUpload(event);
   };
 
@@ -157,6 +160,7 @@ const Upload = () => {
               </button>
             </div>
           </form>
+          <GifLoader loading={isSubmitting} />
         </div>
       </div>
     </>
@@ -164,78 +168,3 @@ const Upload = () => {
 };
 
 export default Upload;
-
-/*
-  const [canSubmit, setCanSubmit] = useState(true);
-  const [error, setError] = useState({
-    name: false,
-    description: false,
-    location: false,
-  });
-  
-  const navigate = useNavigate();
-  const [fileName, setFileName] = useState({name: "", description: "", location: "", PostImage: null});
-
-  const handeldata = async (e) => {
-    e.preventDefault();
-    if (!fileName.name && !fileName.description && !fileName.location && !fileName.PostImage) {
-      setError({ name: true, location: true, description: true , PostImage: true });
-    } else {
-      if (!fileName.name && !fileName.description) {
-        setError({ name: true, description: true });
-      } else if (!fileName.name && !fileName.location) {
-        setError({ name: true, location: true });
-      } else if (!fileName.name && !fileName.PostImage) {
-        setError({ name: true, PostImage: true });
-      } else if (!fileName.location && !fileName.description) {
-        setError({ location: true, description: true });
-      } else if (!fileName.location && !fileName.PostImage) {
-        setError({ location: true, PostImage: true });
-      } else if (!fileName.description && !fileName.PostImage) {
-        setError({ description: true, PostImage: true });
-      } else if (!fileName.name) {
-        setError({ ...error, name: true });
-      } else if (!fileName.location) {
-        setError({ ...error, location: true });
-      } else if (!fileName.description) {
-        setError({ ...error, description: true });
-      } else if (!fileName.PostImage) {
-        setError({ ...error, PostImage: true });
-      }
-    }
-  };
-  
-  const handleform = async (e) => {
-    e.preventDefault();
-    let verify = fileName.name.length && fileName.description.length && fileName.location.length;
-    try {
-      if (verify) {
-        let filename = new FormData();
-        filename.append("photu", fileName.PostImage);
-        filename.append("name", fileName.name);
-        filename.append("location", fileName.location);
-        filename.append("description", fileName.description);
-
-        let data = await axios.post("https://instaclone-app-c06e.onrender.com/posts", filename);
-        if (data) {
-          setFileName({name: "", description: "", location: "", PostImage: null});
-          navigate("/postview");
-        }
-      }
-    } catch (err) {
-      alert(err.message);
-    }
-  };
-  const handleChange = (event) => {
-    setFileName({...fileName, PostImage: event.target.files[0]});
-  };
-  const submit = async (e) => {
-    e.preventDefault();
-    if (!canSubmit) return;
-    setCanSubmit(false);
-    
-    setTimeout(() => {
-      setCanSubmit(true);
-    }, 2000);
-  };
-*/
