@@ -8,7 +8,7 @@ const LandingPage = () => {
         <img className="land-img" src={require("./Images/1.png")} alt="land" />
       </div>
       <div className="enter-div">
-        <h1 className="head">10x Team 04</h1>
+        <h1 className="head">Instagram Clone App</h1>
         <Link to="/postview">
           <button className="enter">Enter</button>
         </Link>
