@@ -46,12 +46,14 @@ const Postview = () => {
       <div className="main">
         <div>
           <Link to="/">
-            <img src= {require('./Images/home.png')} className="home" alt="home"/>
+            <img
+              src={require("./Images/home.png")}
+              className="home"
+              alt="home"
+            />
           </Link>
         </div>
         {arr.map((data, index) => {
-          
-          
           return (
             <>
               <section className="container" key={index}>
@@ -63,11 +65,7 @@ const Postview = () => {
                   <p className="med">{data.location}</p>
                 </div>
 
-                <img
-                  className="img"
-                  src={data.PostImage}
-                  alt=""
-                />
+                <img className="img" src={data.PostImage} alt="" />
                 <div className="sp2">
                   <div className="likesend">
                     <FavoriteBorderIcon />
